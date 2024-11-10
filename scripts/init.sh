@@ -42,5 +42,8 @@ bench new-site dev.localhost \
 bench --site dev.localhost set-config developer_mode 1
 bench --site dev.localhost clear-cache
 bench use dev.localhost
+
+bench get-app erpnext --branch version-13  # Specify the branch if necessary
+bench --site dev.localhost install-app erpnext
 bench get-app hrms
 bench --site dev.localhost install-app hrms
