@@ -42,5 +42,8 @@ bench new-site dev.localhost \
 bench --site dev.localhost set-config developer_mode 1
 bench --site dev.localhost clear-cache
 bench use dev.localhost
-bench get-app crm
-bench --site dev.localhost install-app crm
+bench get-app --branch version-15 --resolve-deps erpnext
+bench get-app hrms
+bench --site dev.localhost install-app erpnext
+bench --site dev.localhost install-app hrms
+
