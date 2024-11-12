@@ -17,12 +17,10 @@ nvm use 18
 echo "nvm use 18" >> ~/.bashrc
 cd /workspace
 
-chown frappe:frappe /workspace/frappe-bench
-
 bench init \
 --ignore-exist \
 --skip-redis-config-generation \
---frappe-branch version-14 frappe-bench
+frappe-bench
 
 cd frappe-bench
 
@@ -44,7 +42,5 @@ bench new-site dev.localhost \
 bench --site dev.localhost set-config developer_mode 1
 bench --site dev.localhost clear-cache
 bench use dev.localhost
-bench get-app --branch version-14 --resolve-deps erpnext
-bench --site dev.localhost install-app erpnext
-bench --site dev.localhost install-app hrms
-bench start
+bench get-app crm
+bench --site dev.localhost install-app crm
