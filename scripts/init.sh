@@ -43,7 +43,7 @@ bench --site dev.localhost set-config developer_mode 1
 bench --site dev.localhost clear-cache
 bench use dev.localhost
 bench get-app --branch version-15 --resolve-deps erpnext
-bench get-app hrms
+bench get-app https://github.com/frappe/hrms.git
 bench --site dev.localhost install-app erpnext
 bench --site dev.localhost install-app hrms
 
